@@ -13,7 +13,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-st.header("Neural Style Transfer Video Generation yo")
+st.header("Neural Style Transfer Video Generation")
 
 # Sidebar
 st.sidebar.header("Neural Style Transfer Video Generation")
