@@ -25,7 +25,7 @@ with st.sidebar.expander('About the app'):
 
 # Reconstruct or Transfer
 with st.sidebar.container():
-    st.sidebar.subheader("Reconstruct or Transfer")
+    st.sidebar.subheader("Reconstruct or Transfer batao")
 
     Type = st.sidebar.selectbox("Do you want to reconstruct or transfer",
                                 ["Reconstruct", "Transfer"])
