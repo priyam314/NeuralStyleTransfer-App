@@ -5,7 +5,7 @@ In this repository I have implemented original Neural Style Transfer paper "[Ima
 # Contents
 
 1. [Introduction](#Introduction)
-2. Reconstruct
+2. [Reconstruct](#Reconstruct)
    1. Noise
    2. Content
    3. Style
@@ -26,9 +26,19 @@ Authors used the feature representations from VGG network to learn high and low 
 
 I believe this brief overview of Neural Style Transfer is enough to get us started with experiments and notice some fascinating results.
 
+*Note:* This is not a blog post on Neural Style Transfer. No exlpanation on the type of model and, training is provided.
+
 # Reconstruct
 
+Neural Style Transfer is like painting an image over a canvas. This canvas is of same size to that of content image since content is static and only dynamic changes that need to be composed over this canvas is of style image. Though size is same to that of content image but there are 3 - 4 ways we can initialize this canvas with, and then using gradient descent :chart_with_downwards_trend: update the values of the canvas.
 
+## Noise
+
+We can initialize the canvas with **noise** and then update the values to look similar to the content image having style composed on it.
+
+## Content
+
+## Style
 
 # Visualization
 
