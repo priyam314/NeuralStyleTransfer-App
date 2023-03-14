@@ -6,9 +6,9 @@ In this repository I have implemented original Neural Style Transfer paper "[Ima
 
 1. [Introduction](#Introduction)
 2. [Reconstruct](#Reconstruct)
-   1. Noise
-   2. Content
-   3. Style
+   1. [Noise](##Noise)
+   2. [Content](##Content)
+   3. [Style](##Style)
 3. Visualization
    1. Style
    2. Content
@@ -26,7 +26,7 @@ Authors used the feature representations from VGG network to learn high and low 
 
 I believe this brief overview of Neural Style Transfer is enough to get us started with experiments and notice some fascinating results.
 
-*Note:* This is not a blog post on Neural Style Transfer. No exlpanation on the type of model and, training is provided.
+*Note:* This is not a blog post on Neural Style Transfer. No exlpanation on the type of model, training etc is provided.
 
 # Reconstruct
 
@@ -34,11 +34,23 @@ Neural Style Transfer is like painting an image over a canvas. This canvas is of
 
 ## Noise
 
-We can initialize the canvas with **noise** and then update the values to look similar to the content image having style composed on it.
+We can initialize the canvas with **noise** and then update the values to look similar to the content image having style composed on it. Using below script we generate a noise canvas and set its `requires_grad = True`. This enables the grad function to update the values of the following canvas. 
+
+```python
+generated_image = torch.randn(content_image.size())
+generated_image.to(device, torch.float)
+generated_image.requires_grad = True
+```
+
+
 
 ## Content
 
+We can initialize the canvas with **content image** itself and then update the values to look similar to the content image having style composed on it.
+
 ## Style
+
+We can initialize the canvas with **style image** itself and then update the values to look similar to the content image having style composed on it.
 
 # Visualization
 
