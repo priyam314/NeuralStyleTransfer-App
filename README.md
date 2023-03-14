@@ -46,7 +46,13 @@ generated_image.requires_grad = True
 
 ## Content
 
-We can initialize the canvas with **content image** itself and then update the values to look similar to the content image having style composed on it.
+We can initialize the canvas with **content image** itself and then update the values to look similar to the content image having style composed on it. Using below line of code we initiate canvas with content image.
+
+```python
+generated_image = content_image.clone().requires_grad_(True)
+```
+
+
 
 ## Style
 
