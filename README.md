@@ -138,9 +138,9 @@ init_image: "content"
 
 | Content_Layers | 0    |      |      |      |      |
 | -------------- | ---- | ---- | ---- | ---- | ---- |
-| Adam           |      |      |      |      |      |
-| LBFGS          |      |      |      |      |      |
-
+| Adam           |   ![0outanim](https://user-images.githubusercontent.com/41532536/226280510-eb297ac3-8e43-44c2-9e00-305c24ac9d8b.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226281106-fd98c3c2-9768-4ec1-95be-0943598eeba2.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226281629-69d7d893-b822-4283-933a-c42ec1782088.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226282069-1b45fb12-fc58-4b9b-8cbe-5065beebc7f2.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226282647-625c87c4-7aca-45a5-badc-256bbc4b85ab.gif)   |
+| LBFGS          |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283096-7428c3f7-f4e5-4089-adfb-4c1ef5251aac.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283411-a19e6bd3-3b0b-4caf-af3c-63ae78e15036.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284077-70246242-e650-4fa7-99c1-8ac37ab3e58c.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284517-b9611e75-ce19-4229-b315-8a1db9be3f0d.gif)   |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285297-642c40af-a15b-4a64-aa35-1ad613499ec1.gif)    |
+| Adam          |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285822-c21edaf0-2e80-448e-acf9-2bd283e3eb58.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286320-4af4a5f0-dad8-4646-b64f-14dbe7cb682a.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286564-c357f8dd-2008-4ad2-8543-8567ed703a7f.gif)    |   ![0outanim](https://user-images.githubusercontent.com/41532536/226286843-48fce497-77c0-4afe-bb29-af954a97dd9f.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226287009-4782cadc-39c0-40db-8068-e50b67ce7b77.gif)   |
 
 
 ## Style
