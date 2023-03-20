@@ -72,6 +72,12 @@ Lets start with some experiments... :microscope:
 
 ### Changing Content Layers
 
+bash command
+
+```bash
+python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --optimizer "Adam"
+```
+
 parameters we are using
 
 ```yaml
@@ -81,7 +87,11 @@ init_image: "noise"
 
 | Content_Layer    | 0           | 1    | 2    | 3    | 4    |
 | :--------------- | ----------- | ---- | ---- | ---- | ---- |
-| Generated Canvas | ![0out(1)anim](https://user-images.githubusercontent.com/41532536/226229173-eab555a5-cabd-4fb2-9cac-252ed482e88c.gif) |   ![0outanim](https://user-images.githubusercontent.com/41532536/226230389-dfb97a0f-4b3f-4ca3-9068-f8af45f98be0.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226230917-e317265a-6a3b-47a3-9c2a-283b2ca36b12.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226231131-f910b4ca-57fd-4c2c-a571-2d603752e8e3.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226231328-8c4b7eed-9ebf-48c0-a8a7-ccd68267adc7.gif)   |
+| Generated Canvas | ![0out(1)anim](https://user-images.githubusercontent.com/41532536/226229173-eab555a5-cabd-4fb2-9cac-252ed482e88c.gif) |      |      |      |      |
+
+on `A4000` GPU it took 33s to run with current configuration
+
+
 
 ## Content
 
