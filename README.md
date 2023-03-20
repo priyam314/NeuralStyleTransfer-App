@@ -85,9 +85,9 @@ optimizer: "Adam"
 init_image: "noise"
 ```
 
-| Content_Layer    |                              0                               |                              1                               |                              2                               |                              3                               |                              4                               |
-| ---------------- | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| Generated Canvas | ![0out(1)anim](https://user-images.githubusercontent.com/41532536/226229173-eab555a5-cabd-4fb2-9cac-252ed482e88c.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226230389-dfb97a0f-4b3f-4ca3-9068-f8af45f98be0.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226230917-e317265a-6a3b-47a3-9c2a-283b2ca36b12.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226231131-f910b4ca-57fd-4c2c-a571-2d603752e8e3.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226233226-e4eb9446-0af0-43d2-804f-60f56bb10f1c.gif) |
+|    Content_Layer     |                              0                               |                              1                               |                              2                               |                              3                               |                              4                               |
+| :------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| **Generated Canvas** | ![0out(1)anim](https://user-images.githubusercontent.com/41532536/226229173-eab555a5-cabd-4fb2-9cac-252ed482e88c.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226230389-dfb97a0f-4b3f-4ca3-9068-f8af45f98be0.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226230917-e317265a-6a3b-47a3-9c2a-283b2ca36b12.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226231131-f910b4ca-57fd-4c2c-a571-2d603752e8e3.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226233226-e4eb9446-0af0-43d2-804f-60f56bb10f1c.gif) |
 
 on `A4000` GPU it took 33s to run with current configuration for one canvas generation
 
@@ -104,9 +104,9 @@ optimizer: "LBFGS"
 init_image: "noise"
 ```
 
-|  Content_Layer   |                              0                               |                              1                               |                              2                               |                              3                               |                              4                               |
-| :--------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| Generated Canvas | ![0outanim](https://user-images.githubusercontent.com/41532536/226241745-a17e30a3-49f1-429f-8a48-b34f7cb4be62.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226241394-a003ccc4-40d3-40c6-9a43-6b88582929cc.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226240585-7320d8b9-f536-4c0e-83e3-8ad0030cd299.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226237980-83c8d273-739a-4361-84c8-5d786d12691c.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226237203-f7984ea4-646e-48ad-b42f-6e6eaef8b609.gif) |
+|    Content_Layer     |                              0                               |                              1                               |                              2                               |                              3                               |                              4                               |
+| :------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| **Generated Canvas** | ![0outanim](https://user-images.githubusercontent.com/41532536/226241745-a17e30a3-49f1-429f-8a48-b34f7cb4be62.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226241394-a003ccc4-40d3-40c6-9a43-6b88582929cc.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226240585-7320d8b9-f536-4c0e-83e3-8ad0030cd299.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226237980-83c8d273-739a-4361-84c8-5d786d12691c.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226237203-f7984ea4-646e-48ad-b42f-6e6eaef8b609.gif) |
 
 pn `A4000` GPU it took 120s to run with current configuration for one canvas generation
 
@@ -129,11 +129,11 @@ bash command e.g,
 python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --optimizer "Adam" --init_image "content"
 ```
 
-| Content_Layers | 0    |      |      |      |      |
-| -------------- | ---- | ---- | ---- | ---- | ---- |
-| Adam           |   ![0outanim](https://user-images.githubusercontent.com/41532536/226280510-eb297ac3-8e43-44c2-9e00-305c24ac9d8b.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226281106-fd98c3c2-9768-4ec1-95be-0943598eeba2.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226281629-69d7d893-b822-4283-933a-c42ec1782088.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226282069-1b45fb12-fc58-4b9b-8cbe-5065beebc7f2.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226282647-625c87c4-7aca-45a5-badc-256bbc4b85ab.gif)   |
-| LBFGS          |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283096-7428c3f7-f4e5-4089-adfb-4c1ef5251aac.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283411-a19e6bd3-3b0b-4caf-af3c-63ae78e15036.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284077-70246242-e650-4fa7-99c1-8ac37ab3e58c.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284517-b9611e75-ce19-4229-b315-8a1db9be3f0d.gif)   |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285297-642c40af-a15b-4a64-aa35-1ad613499ec1.gif)    |
-| Adam          |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285822-c21edaf0-2e80-448e-acf9-2bd283e3eb58.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286320-4af4a5f0-dad8-4646-b64f-14dbe7cb682a.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286564-c357f8dd-2008-4ad2-8543-8567ed703a7f.gif)    |   ![0outanim](https://user-images.githubusercontent.com/41532536/226286843-48fce497-77c0-4afe-bb29-af954a97dd9f.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226287009-4782cadc-39c0-40db-8068-e50b67ce7b77.gif)   |
+| Content_Layers | 0    | 1 | 2 | 3 | 4 |
+| :------------: | :--: | :--: | :--: | :--: | :--: |
+| **Adam**       |   ![0outanim](https://user-images.githubusercontent.com/41532536/226280510-eb297ac3-8e43-44c2-9e00-305c24ac9d8b.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226281106-fd98c3c2-9768-4ec1-95be-0943598eeba2.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226281629-69d7d893-b822-4283-933a-c42ec1782088.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226282069-1b45fb12-fc58-4b9b-8cbe-5065beebc7f2.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226282647-625c87c4-7aca-45a5-badc-256bbc4b85ab.gif)   |
+| **LBFGS**      |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283096-7428c3f7-f4e5-4089-adfb-4c1ef5251aac.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283411-a19e6bd3-3b0b-4caf-af3c-63ae78e15036.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284077-70246242-e650-4fa7-99c1-8ac37ab3e58c.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284517-b9611e75-ce19-4229-b315-8a1db9be3f0d.gif)   |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285297-642c40af-a15b-4a64-aa35-1ad613499ec1.gif)    |
+| **Adam**      |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285822-c21edaf0-2e80-448e-acf9-2bd283e3eb58.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286320-4af4a5f0-dad8-4646-b64f-14dbe7cb682a.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286564-c357f8dd-2008-4ad2-8543-8567ed703a7f.gif)    |   ![0outanim](https://user-images.githubusercontent.com/41532536/226286843-48fce497-77c0-4afe-bb29-af954a97dd9f.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226287009-4782cadc-39c0-40db-8068-e50b67ce7b77.gif)   |
 
 
 ## Style
@@ -143,6 +143,19 @@ We can initialize the canvas with **style image** itself and then update the val
 ```python
 generated_image = style_image.clone().requires_grad_(True)
 ```
+
+lets' start with some experiments... :microscope:
+
+### Changing Optimizer
+
+```bash
+python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --optimizer "Adam" --init_image "style"
+```
+
+| Content_Layers |  0   |  1   |  2   |  3   |  4   |
+| :------------: | :--: | :--: | :--: | :--: | :--: |
+|    **Adam**    |      |      |      |      |      |
+|   **LBFGS**    |      |      |      |      |      |
 
 
 
