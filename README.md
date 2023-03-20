@@ -106,12 +106,10 @@ init_image: "noise"
 
 | Content_Layer    | 0    | 1    | 2    | 3    | 4    |
 | ---------------- | ---- | ---- | ---- | ---- | ---- |
-| Generated Canvas |      |      |      |      |      |
-
-
-
+| Generated Canvas |   ![0outanim](https://user-images.githubusercontent.com/41532536/226241745-a17e30a3-49f1-429f-8a48-b34f7cb4be62.gif)   |  ![0outanim](https://user-images.githubusercontent.com/41532536/226241394-a003ccc4-40d3-40c6-9a43-6b88582929cc.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226240585-7320d8b9-f536-4c0e-83e3-8ad0030cd299.gif)    |   ![0outanim](https://user-images.githubusercontent.com/41532536/226237980-83c8d273-739a-4361-84c8-5d786d12691c.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226237203-f7984ea4-646e-48ad-b42f-6e6eaef8b609.gif)   |
 
 ## Content
+
 
 We can initialize the canvas with **content image** itself and then update the values to look similar to the content image having style composed on it. Using below line of code we initiate canvas with content image.
 
