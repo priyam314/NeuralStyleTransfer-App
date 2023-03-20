@@ -34,7 +34,7 @@ For our experiments we will set the parameters to following value until explicit
 
 ```yaml
 iterations: 2500
-fps: 20
+fps: 30
 size: 128
 sav_freq: 10
 alpha: 5.0
@@ -42,7 +42,6 @@ beta: 7000.0
 gamma: 1.2
 style_weights: [1e3/n**2 for n in [16.0,32.0,128.0,256.0,512.0]]
 lr: 0.06
-init_image: "noise"
 ```
 
 if path to content image and style images are not provided then default images will be used that lie inside `NeuraltyleTransfer-App/src/data`
@@ -68,6 +67,21 @@ generated_image = torch.randn(content_image.size())
 generated_image.to(device, torch.float)
 generated_image.requires_grad = True
 ```
+
+Lets start with some experiments... :microscope:
+
+### Changing Content Layers
+
+parameters we are using
+
+```yaml
+optimizer: "Adam"
+init_image: "noise"
+```
+
+| Content_Layer    | 0           | 1    | 2    | 3    | 4    |
+| :--------------- | ----------- | ---- | ---- | ---- | ---- |
+| Generated Canvas | 0out(1).avi |      |      |      |      |
 
 
 
