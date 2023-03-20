@@ -154,9 +154,7 @@ python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --opti
 
 | Content_Layers |  0   |  1   |  2   |  3   |  4   |
 | :------------: | :--: | :--: | :--: | :--: | :--: |
-|    **Adam**    |      |      |      |      |      |
-|   **LBFGS**    |      |      |      |      |      |
-
+|    **Adam**    |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226337250-8b09bec5-bf42-4930-951b-337c0aeab814.gif)   |   ![0out1anim](https://user-images.githubusercontent.com/41532536/226337180-c499d371-92df-4676-bcb6-e754b560283e.gif)   |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226337029-f98f031a-b7c1-4fbe-9f8d-eeb54d2d089e.gif)   |   ![0out3anim](https://user-images.githubusercontent.com/41532536/226336876-539604fc-907f-4e20-97ff-d1b1e1a4f560.gif)   |   ![0out4anim](https://user-images.githubusercontent.com/41532536/226336780-488389e4-5516-4f77-a11b-e23ae5a3ae60.gif)   |
 
 
 # Visualization
