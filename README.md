@@ -126,14 +126,7 @@ lets' start with some experiments...:microscope:
 bash command e.g,
 
 ```bash
-python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --optimizer "Adam"
-```
-
-parameters we are using
-
-```yaml
-optimizer: "Adam" 
-init_image: "content"
+python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --optimizer "Adam" --init_image "content"
 ```
 
 | Content_Layers | 0    |      |      |      |      |
