@@ -9,6 +9,7 @@ In this repository I have implemented original Neural Style Transfer paper "[Ima
    1. [Noise](##Noise)
    2. [Content](##Content)
    3. [Style](##Style)
+   4. [Further-Studies](##Further-Studies)
 3. Visualization
    1. Style
    2. Content
@@ -91,6 +92,8 @@ init_image: "noise"
 
 on `A4000` GPU it took 33s to run with current configuration for one canvas generation
 
+Early layers have composed style over canvas relatively well than higher layers but lost the semantics of content in terminal layers. Mid level layers have preserved the content while focusing less on style composition. 
+
 ### Changing Optimizer
 
 ```bash
@@ -109,6 +112,8 @@ init_image: "noise"
 | **Generated Canvas** | ![0outanim](https://user-images.githubusercontent.com/41532536/226241745-a17e30a3-49f1-429f-8a48-b34f7cb4be62.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226241394-a003ccc4-40d3-40c6-9a43-6b88582929cc.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226240585-7320d8b9-f536-4c0e-83e3-8ad0030cd299.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226237980-83c8d273-739a-4361-84c8-5d786d12691c.gif) | ![0outanim](https://user-images.githubusercontent.com/41532536/226237203-f7984ea4-646e-48ad-b42f-6e6eaef8b609.gif) |
 
 pn `A4000` GPU it took 120s to run with current configuration for one canvas generation
+
+Again early layers composed style over canvas relatively well than higher layers but while moving towards higher layers canvas is losing content representation maybe due to over composition of style. Last layer has again lost semantics to quite some extent. 
 
 ## Content
 
@@ -135,6 +140,9 @@ python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --opti
 | **LBFGS**      |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283096-7428c3f7-f4e5-4089-adfb-4c1ef5251aac.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226283411-a19e6bd3-3b0b-4caf-af3c-63ae78e15036.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284077-70246242-e650-4fa7-99c1-8ac37ab3e58c.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226284517-b9611e75-ce19-4229-b315-8a1db9be3f0d.gif)   |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285297-642c40af-a15b-4a64-aa35-1ad613499ec1.gif)    |
 | **Adam**      |  ![0outanim](https://user-images.githubusercontent.com/41532536/226285822-c21edaf0-2e80-448e-acf9-2bd283e3eb58.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286320-4af4a5f0-dad8-4646-b64f-14dbe7cb682a.gif)    |  ![0outanim](https://user-images.githubusercontent.com/41532536/226286564-c357f8dd-2008-4ad2-8543-8567ed703a7f.gif)    |   ![0outanim](https://user-images.githubusercontent.com/41532536/226286843-48fce497-77c0-4afe-bb29-af954a97dd9f.gif)   |   ![0outanim](https://user-images.githubusercontent.com/41532536/226287009-4782cadc-39c0-40db-8068-e50b67ce7b77.gif)   |
 
+In first two rows the only change is in use of optimizer, and clearly both the optimizer produces comparitively similar canvas except in the last layer. Also `Adam` needs more iterations to produce semantically similar canvas to that of what `LBFGS` produce but at the same time former is quite fast to compute since its first order method and doesn't compute curvature of parameter space like latter. 
+
+So we used `Adam` once again on different set of content and style image(last row) to generate canvas and found that last layer in all the cases loses some content information and style over composes on canvas. First two layers are giving comparitively better results all the time. 
 
 ## Style
 
@@ -155,6 +163,20 @@ python3 main.py --reconstruct --style_layers 0 1 2 3 4 --content_layers 1 --opti
 | Content_Layers |  0   |  1   |  2   |  3   |  4   |
 | :------------: | :--: | :--: | :--: | :--: | :--: |
 |    **Adam**    |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226337250-8b09bec5-bf42-4930-951b-337c0aeab814.gif)   |   ![0out1anim](https://user-images.githubusercontent.com/41532536/226337180-c499d371-92df-4676-bcb6-e754b560283e.gif)   |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226337029-f98f031a-b7c1-4fbe-9f8d-eeb54d2d089e.gif)   |   ![0out3anim](https://user-images.githubusercontent.com/41532536/226336876-539604fc-907f-4e20-97ff-d1b1e1a4f560.gif)   |   ![0out4anim](https://user-images.githubusercontent.com/41532536/226336780-488389e4-5516-4f77-a11b-e23ae5a3ae60.gif)   |
+
+Composing content representation over style canvas doesn't seem like a great idea. Last layers over composed the style with some noise, `content_layer: 2` smoothen out the background highlighting content. 
+
+## Further Studies
+
+From above experiments we can infer that in `content_layer: 4` canvas has lost semantics to some extent due to either *over composing of style* or *under-representation of content representation*. We can infer that out in [Visualization](##Visualization) by looking at what each layer is contributing in generating canvas.  The same can be said for `content_layer: 3` but with relatively less prominence than the former. 
+
+In `content_layer: 0` we can see that style is well composed over canvas while also preserving the content representation, same can be said for `content_layer: 1` but with less prominence. So for further experiment lets' use `content_layer: 0` and `Adam` for fast computation. Currently we have seen all the canvases generated by `conv` layers, lets experiment with `relu` now.
+
+| Content_Layers |  0   |  1   |  2   |  3   |  4   |
+| :------------: | :--: | :--: | :--: | :--: | :--: |
+|    **conv**    |      |      |      |      |      |
+|    **relu**    |      |      |      |      |      |
+
 
 
 # Visualization
