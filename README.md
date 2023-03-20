@@ -28,9 +28,36 @@ I believe this brief overview of Neural Style Transfer is enough to get us start
 
 *Note:* This is not a blog post on Neural Style Transfer. No exlpanation on the type of model, training etc is provided.
 
+# Setting Parameters
+
+For our experiments we will set the parameters to following value until explicitly written.
+
+```yaml
+iterations: 2500
+fps: 20
+size: 128
+sav_freq: 10
+alpha: 5.0
+beta: 7000.0
+gamma: 1.2
+style_weights: [1e3/n**2 for n in [16.0,32.0,128.0,256.0,512.0]]
+lr: 0.06
+init_image: "noise"
+```
+
+if path to content image and style images are not provided then default images will be used that lie inside `NeuraltyleTransfer-App/src/data`
+
+For detailed understanding about these parameters go through `python3 main.py -h`
+
 # Reconstruct
 
 Neural Style Transfer is like painting an image over a canvas. This canvas is of same size to that of content image since content is static and only dynamic changes that need to be composed over this canvas is of style image. Though size is same to that of content image but there are 3 - 4 ways we can initialize this canvas with, and then using gradient descent :chart_with_downwards_trend: update the values of the canvas.
+
+Following shell command can lead you to generate canvas by blending the style over content image. This is basic bash command for reconstruction of canvas, for more infomation about arguments you can go through `python3 main.py --help`
+
+```bash
+python3 main.py --reconstruct --content_layers <num> --style_layers 0 1 2 3 4
+```
 
 ## Noise
 
@@ -56,7 +83,13 @@ generated_image = content_image.clone().requires_grad_(True)
 
 ## Style
 
-We can initialize the canvas with **style image** itself and then update the values to look similar to the content image having style composed on it.
+We can initialize the canvas with **style image** itself and then update the values to look similar to the content image having style composed on it. Using below line of code we initiate canvas with content image.
+
+```python
+generated_image = style_image.clone().requires_grad_(True)
+```
+
+
 
 # Visualization
 
