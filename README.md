@@ -174,9 +174,8 @@ In `content_layer: 0` we can see that style is well composed over canvas while a
 
 | Content_Layers |  0   |  1   |  2   |  3   |  4   |
 | :------------: | :--: | :--: | :--: | :--: | :--: |
-|    **conv**    |      |      |      |      |      |
-|    **relu**    |      |      |      |      |      |
-
+|    **conv**    |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226406989-4726c0f8-2af7-4afe-82b5-3d6679bb6118.gif)   |   ![0out1anim](https://user-images.githubusercontent.com/41532536/226406897-0a35f296-d6e1-4b24-9e09-4dcf6b5e07f9.gif)2   |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226406816-c4912a9d-551e-43d4-9660-3124a47ca643.gif)   |   ![0out3anim](https://user-images.githubusercontent.com/41532536/226406738-d3a75d4a-3464-491a-934e-d753be6a71cd.gif)   |   ![0out4anim](https://user-images.githubusercontent.com/41532536/226406638-fb0a1c33-d49f-4fa2-9367-a2af6c0923fa.gif)   |
+|    **relu**    |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226403113-64d65811-7855-4fa0-b513-44adcfc22f01.gif)   |   ![0out1anim](https://user-images.githubusercontent.com/41532536/226403003-88e9f53c-73a4-4276-a0eb-c3ae19231bb8.gif)   |  ![0out2anim](https://user-images.githubusercontent.com/41532536/226402893-d9475902-e24c-4df2-ab68-af3b7e961988.gif)    |  ![0out3anim](https://user-images.githubusercontent.com/41532536/226402798-f80a739a-7e23-4ae3-87ee-c1b5fca3353e.gif)    |   ![0out4anim](https://user-images.githubusercontent.com/41532536/226402685-de4f134a-f95f-40ad-88f3-eb4835eb51c0.gif)   |
 
 
 # Visualization
