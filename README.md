@@ -81,7 +81,9 @@ init_image: "noise"
 
 | Content_Layer    | 0           | 1    | 2    | 3    | 4    |
 | :--------------- | ----------- | ---- | ---- | ---- | ---- |
-| Generated Canvas | 0out(1).avi |      |      |      |      |
+| Generated Canvas | ![0out(1)anim](https://user-images.githubusercontent.com/41532536/226229173-eab555a5-cabd-4fb2-9cac-252ed482e88c.gif) |      |      |      |      |
+
+
 
 
 
