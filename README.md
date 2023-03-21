@@ -211,11 +211,25 @@ python3 main.py --visualize "content" --content_layers 1 3 4 ---iterations 700 -
 | -------------- | ----- | ----- |
 | **Canvas**     |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226545739-189500ea-ca96-435d-a818-a21d9d799644.gif)    |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226546315-5c6bf1c6-857c-4a27-a6c8-a8fe3d4e3363.gif)   |
 
-
-
-
-
 ## Style
+
+when `--visualize "style"` then we can only visualize the style representation of any layer or by grouping some layers.
+
+| Style_Layers | 0    | 1    | 2    | 3    | 4    |
+| ------------ | ---- | ---- | ---- | ---- | ---- |
+| **Canvas**   |      |      |      |      |      |
+
+What if we arbitralily choose some content layers and find the output of their resultant on canvas, lets check
+
+```bash
+python3 main.py --visualize "style" --content_layers 1 3 4 ---iterations 700 --fps 2 --sav_freq 5
+```
+
+| Style_Layers |      |      |      |
+| ------------ | ---- | ---- | ---- |
+| **Canvas**   |      |      |      |
+
+
 
 ## Both
 
