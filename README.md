@@ -186,7 +186,7 @@ Until now we have reconstructed canvases using all the style layers and any one 
 shell command to visualize is
 
 ```bash
-python3 main.py --visualize "content" --content_layers 1 2 --iterations 700 --fps 2 --sav_freq 5
+python3 main.py --visualize "content" --content_layers 1 2 --iterations 1500 --fps 30 --sav_freq 5
 ```
 
 ## Content
@@ -217,19 +217,23 @@ when `--visualize "style"` then we can only visualize the style representation o
 
 | Style_Layers | 0    | 1    | 2    | 3    | 4    |
 | ------------ | ---- | ---- | ---- | ---- | ---- |
-| **Canvas**   |      |      |      |      |      |
+|   **Adam**   |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226550689-225f86c1-476b-4007-99c9-3916e832e22f.gif)   |  ![0out1anim](https://user-images.githubusercontent.com/41532536/226550645-34662c8f-bec9-4837-9217-fea647a6932e.gif)    |  ![0out2anim](https://user-images.githubusercontent.com/41532536/226550609-8e39a25a-c535-4619-ab12-5689e581bacd.gif)    |   ![0out3anim](https://user-images.githubusercontent.com/41532536/226550525-f3de3c34-5195-494e-a8f7-ca345ffac49c.gif)   |   ![0out4anim](https://user-images.githubusercontent.com/41532536/226550453-a2f40922-45b0-4074-9c33-bf1d6231931e.gif)   |
 
 What if we arbitralily choose some content layers and find the output of their resultant on canvas, lets check
 
 ```bash
-python3 main.py --visualize "style" --content_layers 1 3 4 ---iterations 700 --fps 2 --sav_freq 5
+python3 main.py --visualize "style" --content_layers 1 3 4 ---iterations 2000 --fps 25 --sav_freq 8 --optimizer "Adam"
 ```
 
-| Style_Layers |      |      |      |
-| ------------ | ---- | ---- | ---- |
-| **Canvas**   |      |      |      |
+| Style_Layers | 0 1 4 | 1 2 3 | 0 1   |
+| ------------ | ----- | ----- | ----- |
+|   **Adam**   |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226555881-84002b04-78d9-43c1-afb7-0a9df0f33755.gif)    |   ![0out1anim](https://user-images.githubusercontent.com/41532536/226555948-8776095b-a2bc-4092-8e15-9407ca5cf1f9.gif)    |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226556012-57a80c37-a5b4-46f7-b1d8-43de5e804e3d.gif)    |
+|   **LBFGS**  |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226560740-6a4362aa-0447-4bfc-9543-7c291b1595ea.gif)    |    ![0out1anim](https://user-images.githubusercontent.com/41532536/226560684-44758ca3-6554-4df9-a96b-ee15e0f86cdf.gif)   |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226560639-a8c42f87-2fb7-41ea-bb5a-7d03b2edb0ca.gif)    |
 
 
+|![0out3anim](https://user-images.githubusercontent.com/41532536/226561065-beff04d0-0057-4199-989a-4ef3305cfd66.gif)|
+|:-:|
+|canvas output when all the style layers were used|
 
 ## Both
 
