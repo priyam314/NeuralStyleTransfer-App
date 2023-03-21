@@ -10,10 +10,10 @@ In this repository I have implemented original Neural Style Transfer paper "[Ima
    2. [Content](##Content)
    3. [Style](##Style)
    4. [Further-Studies](##Further-Studies)
-3. Visualization
-   1. Style
-   2. Content
-4. 
+3. [Visualization](#Visualization)
+   1. [Style](##StyleV)
+   2. [Content](##ContentV)
+   3. [Both](##Both)
 
 # Introduction
 
@@ -189,7 +189,7 @@ shell command to visualize is
 python3 main.py --visualize "content" --content_layers 1 2 --iterations 1500 --fps 30 --sav_freq 5
 ```
 
-## Content
+## ContentV
 
 when `--visualize "content"` then we can only visualize the content representation of any layer or by grouping some layers.
 
@@ -211,7 +211,7 @@ python3 main.py --visualize "content" --content_layers 1 3 4 ---iterations 700 -
 | -------------- | ----- | ----- |
 | **Canvas**     |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226545739-189500ea-ca96-435d-a818-a21d9d799644.gif)    |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226546315-5c6bf1c6-857c-4a27-a6c8-a8fe3d4e3363.gif)   |
 
-## Style
+## StyleV
 
 when `--visualize "style"` then we can only visualize the style representation of any layer or by grouping some layers.
 
@@ -245,7 +245,10 @@ In the last we can visualize what all the style layers are contributing to the c
 
 For fun we will use all the style and content layers to generate the canvas, although this configuration worked for the below image but no for many.
 
-![0out3anim](https://user-images.githubusercontent.com/41532536/226572788-f0ad7ccf-4b80-42db-8894-3afed210e1d3.gif)
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/41532536/226572788-f0ad7ccf-4b80-42db-8894-3afed210e1d3.gif"/>
+</p>
 
+Original image of lion was grey.
 
-
+You can play with with other hyperparameters to generate canvases and enhance your understanding of Neural Style Transfer
