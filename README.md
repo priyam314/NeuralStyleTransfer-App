@@ -186,16 +186,32 @@ Until now we have reconstructed canvases using all the style layers and any one 
 shell command to visualize is
 
 ```bash
-python3 main.py --visualize "content" --content_layers 1 2 
+python3 main.py --visualize "content" --content_layers 1 2 --iterations 700 --fps 2 --sav_freq 5
 ```
 
 ## Content
 
 when `--visualize "content"` then we can only visualize the content representation of any layer or by grouping some layers.
 
-| Content_Layers |  0   |  1   |  2   |  3   |  4   |
-| :------------: | :--: | :--: | :--: | :--: | :--: |
-|      Adam      |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226537877-c7fe467f-2baf-43fa-9e9a-8a63a221176a.gif)   |   ![0out1anim](https://user-images.githubusercontent.com/41532536/226537868-51fa9f54-c503-4b0a-b799-5eb30c32386e.gif)   |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226537858-11e649e9-d82c-4dad-beb3-e57f3d568132.gif)   |   ![0out3anim](https://user-images.githubusercontent.com/41532536/226537854-e22f57c9-33a0-46f1-9cd6-10d6e3ed285a.gif)   |  ![0out4anim](https://user-images.githubusercontent.com/41532536/226537841-99f23b78-e708-4648-95e4-42cc77f6dd90.gif)    |
+| Content_Layers |                              0                               |                              1                               |                              2                               |                              3                               |                              4                               |
+| :------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|   **Canvas**   | ![0out0anim](https://user-images.githubusercontent.com/41532536/226537877-c7fe467f-2baf-43fa-9e9a-8a63a221176a.gif) | ![0out1anim](https://user-images.githubusercontent.com/41532536/226537868-51fa9f54-c503-4b0a-b799-5eb30c32386e.gif) | ![0out2anim](https://user-images.githubusercontent.com/41532536/226537858-11e649e9-d82c-4dad-beb3-e57f3d568132.gif) | ![0out3anim](https://user-images.githubusercontent.com/41532536/226537854-e22f57c9-33a0-46f1-9cd6-10d6e3ed285a.gif) | ![0out4anim](https://user-images.githubusercontent.com/41532536/226537841-99f23b78-e708-4648-95e4-42cc77f6dd90.gif) |
+
+Latter layers are capturing textures of the content image while not giving much weightage to color and low level feature details. Although `content_layer: 4` canvas seems to have under-representated the content representation maybe due to insufficient number of gradients flowing back to canvas for update
+
+Earlier layers captured the shape and somewhat texture really well. 
+
+What if we arbitralily choose some content layers and find the output of their resultant on canvas, lets check
+
+```bash
+python3 main.py --visualize "content" --content_layers 2 3 4 ---iterations 700 --fps 2 --sav_freq 5
+```
+
+| Content_Layers | 2 3 4 |
+| -------------- | ----- |
+| **Canvas**     |       |
+
+
 
 ## Style
 
