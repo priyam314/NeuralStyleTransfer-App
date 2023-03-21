@@ -243,5 +243,9 @@ In the last we can visualize what all the style layers are contributing to the c
 
 ## Both
 
+For fun we will use all the style and content layers to generate the canvas, although this configuration worked for the below image but no for many.
+
+![0out3anim](https://user-images.githubusercontent.com/41532536/226572788-f0ad7ccf-4b80-42db-8894-3afed210e1d3.gif)
+
 
 
