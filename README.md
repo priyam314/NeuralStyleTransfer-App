@@ -219,6 +219,8 @@ when `--visualize "style"` then we can only visualize the style representation o
 | ------------ | ---- | ---- | ---- | ---- | ---- |
 |   **Adam**   |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226550689-225f86c1-476b-4007-99c9-3916e832e22f.gif)   |  ![0out1anim](https://user-images.githubusercontent.com/41532536/226550645-34662c8f-bec9-4837-9217-fea647a6932e.gif)    |  ![0out2anim](https://user-images.githubusercontent.com/41532536/226550609-8e39a25a-c535-4619-ab12-5689e581bacd.gif)    |   ![0out3anim](https://user-images.githubusercontent.com/41532536/226550525-f3de3c34-5195-494e-a8f7-ca345ffac49c.gif)   |   ![0out4anim](https://user-images.githubusercontent.com/41532536/226550453-a2f40922-45b0-4074-9c33-bf1d6231931e.gif)   |
 
+Style layers when visualized individualy seems to have not been contributing any significant style to canvas, infact while moving towards higher layers we see patterns of noise.
+
 What if we arbitralily choose some content layers and find the output of their resultant on canvas, lets check
 
 ```bash
@@ -234,6 +236,10 @@ python3 main.py --visualize "style" --content_layers 1 3 4 ---iterations 2000 --
 |![0out3anim](https://user-images.githubusercontent.com/41532536/226561065-beff04d0-0057-4199-989a-4ef3305cfd66.gif)|
 |:-:|
 |canvas output when all the style layers were used|
+
+When visualized grouped contribution of layers we can see some style over canvas very clearly. `LBGFS` shows style in every canvas even when `Adam` failed to in `style_layers: 1 2 3`. On further looking into the matter we found that Adam too atleast 4000 iterations to learn the representations and output visually appealing style in comparision to others. The reason behind it can be that higher layers don't focus more on colors but on texture and `Adam` find it hard to extract the color features information than `LBFGS`. 
+
+In the last we can visualize what all the style layers are contributing to the canvas, it looks more similar to style image itself.
 
 ## Both
 
