@@ -232,10 +232,24 @@ python3 main.py --visualize "style" --content_layers 1 3 4 ---iterations 2000 --
 |   **Adam**   |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226555881-84002b04-78d9-43c1-afb7-0a9df0f33755.gif)    |   ![0out1anim](https://user-images.githubusercontent.com/41532536/226555948-8776095b-a2bc-4092-8e15-9407ca5cf1f9.gif)    |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226556012-57a80c37-a5b4-46f7-b1d8-43de5e804e3d.gif)    |
 |   **LBFGS**  |   ![0out0anim](https://user-images.githubusercontent.com/41532536/226560740-6a4362aa-0447-4bfc-9543-7c291b1595ea.gif)    |    ![0out1anim](https://user-images.githubusercontent.com/41532536/226560684-44758ca3-6554-4df9-a96b-ee15e0f86cdf.gif)   |   ![0out2anim](https://user-images.githubusercontent.com/41532536/226560639-a8c42f87-2fb7-41ea-bb5a-7d03b2edb0ca.gif)    |
 
-
-|![0out3anim](https://user-images.githubusercontent.com/41532536/226561065-beff04d0-0057-4199-989a-4ef3305cfd66.gif)|
-|:-:|
-|canvas output when all the style layers were used|
+<center>
+    <table>
+        <tr >
+            <td>
+                <center>
+            	<img src="https://user-images.githubusercontent.com/41532536/226561065-beff04d0-0057-4199-989a-4ef3305cfd66.gif"/>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center>
+            		canvas output when all the style layers were used
+                </center>
+            </td>
+        </tr>
+    </table>
+</center>
 
 When visualized grouped contribution of layers we can see some style over canvas very clearly. `LBGFS` shows style in every canvas even when `Adam` failed to in `style_layers: 1 2 3`. On further looking into the matter we found that Adam too atleast 4000 iterations to learn the representations and output visually appealing style in comparision to others. The reason behind it can be that higher layers don't focus more on colors but on texture and `Adam` find it hard to extract the color features information than `LBFGS`. 
 
